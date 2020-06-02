@@ -21,6 +21,27 @@
     <title>Movie Search App</title>
   </head>
   <body>
-    <h1>Hola mundo</h1>
+    <!-- Navigation -->
+    <nav>
+      <div class="container main-nav">
+        <h2>
+          <a href="/"><i class="fas fa-film"></i> Movie/TV Show Search</a>
+        </h2>
+        <form>
+          <i class="fas fa-search"></i>
+          <input type="search" id="search" placeholder="Search for a Movie" />
+        </form>
+        <div class="dark-mode">
+          <span>Dark Mode</span>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <div id="app"></div>
+    </main>
   </body>
 </html>
