@@ -1,7 +1,7 @@
 class Movies {
   constructor() {
     this.key = '7041ca32';
-    this.baseURI = 'http://www.omdbapi.com/';
+    this.baseURI = 'https://www.omdbapi.com/';
   }
 
   async getMovies(text) {
