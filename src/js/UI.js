@@ -35,7 +35,7 @@ class UI {
               <div class="movie-info animate__animated animate__fadeInRight">
                   <h1>${movie.Title}</h1>
                   <div class="main-info">
-                  <p>${movie.Runtime} <i class="fas fa-circle"></i> ${movie.Released} <i class="fas fa-circle"></i> ${movie.Country}</p>
+                  <p><i class="fas fa-video"></i> ${movie.Runtime} - <i class="far fa-calendar-check"></i> ${movie.Released} - <i class="fas fa-globe-americas"></i> ${movie.Country}</p>
                    <p>Genre: ${movie.Genre}</p>
                    <p>Actors: ${movie.Actors}</p>
                   </div>
@@ -43,6 +43,34 @@ class UI {
               </div>
               </div>
       `;
+
+    app.innerHTML = element;
+  }
+
+  error404() {
+    const app = document.querySelector('#app');
+
+    app.innerHTML = '';
+
+    const element = `
+              <div class="error animate__animated animate__zoomInDown">
+              <i class="fas fa-times-circle"></i>
+              <h2>ERROR 404 <br> NOT FOUND<h2>
+              <p>Unfortunetly the term searched is not in out database or there is a problem with your internet connection</p>
+              </div>
+      `;
+
+    app.innerHTML = element;
+  }
+
+  loading() {
+    const app = document.querySelector('#app');
+
+    app.innerHTML = '';
+
+    const element = `<div class="loading">
+                <div class="loading-spinner"></div>
+              </div>`;
 
     app.innerHTML = element;
   }

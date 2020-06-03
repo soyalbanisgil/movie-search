@@ -1,0 +1,19 @@
+.loading
+    height: 60vh
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    .loading-spinner
+        width: 5rem
+        height: 5rem
+        display: inline-block
+        border: 3px solid rgba(0,0,0,0.3)
+        border-radius: 58%
+        border-top-color: #000
+        animation: 1s spin infinite ease-in-out
+
+@keyframes  spin
+    to
+        transform: rotate(360deg)
+        

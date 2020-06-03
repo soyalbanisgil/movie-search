@@ -4,11 +4,11 @@ class Movies {
     this.baseURI = 'https://www.omdbapi.com/';
   }
 
-  async getMovies(text) {
-    const query = `?apikey=${this.key}&s=${text}`;
+  async getMovies(text, page) {
+    const query = `?apikey=${this.key}&s=${text}&page=${page}`;
     const response = await fetch(this.baseURI + query);
     const data = await response.json();
-    return data.Search;
+    return data;
   }
 
   async getMovie(id) {
