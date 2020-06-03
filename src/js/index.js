@@ -26,9 +26,10 @@ form.addEventListener('submit', (e) => {
     movies
       .getMovies(form.search.value, page_count)
       .then((data) => {
-        console.log(data);
+        form.search.blur();
 
         ui.searchResult(data.Search);
+
         form.reset();
       })
       .catch((err) => {
@@ -45,9 +46,9 @@ app.addEventListener('click', (e) => {
 
   if (e.target.dataset['identifier']) {
     movie.getMovie(e.target.dataset['identifier']).then((data) => {
-      console.log(data);
-
       const ui = new UI();
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
 
       ui.movieDetails(data);
     });
